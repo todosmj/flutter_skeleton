@@ -4,6 +4,7 @@ import 'package:skeleton/models/user.dart';
 import 'package:skeleton/view_models/user_view_model.dart';
 
 class HomeScreen extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return Material(
@@ -16,7 +17,6 @@ class HomeScreen extends StatelessWidget {
         builder: (BuildContext context, UserViewModel userViewModel, _) {
           if(userViewModel.isLoading()) return Center(child: CircularProgressIndicator(),);
           User user = userViewModel.user;
-          print(user.email);
           return Center(
             child: Text(
               user.email,
