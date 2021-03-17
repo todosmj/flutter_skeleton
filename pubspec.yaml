@@ -15,8 +15,15 @@ dependencies:
   provider: ^5.0.0
   equatable: ^2.0.0
   get_it: ^6.0.0
-  dartz: ^0.9.2
+  dartz: ^0.9.2 #함수형 프로그래밍에서 사용 Either문법사용시 선언
   cupertino_icons: ^1.0.2
+  intl: ^0.16.1
+  #암호화 방식 모듈
+  crypto: ^2.1.5
+  http: ^0.12.2
+
+  #package info
+  package_info: ^0.4.3
 
 dev_dependencies:
   flutter_test:

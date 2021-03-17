@@ -3,6 +3,8 @@ import 'package:skeleton/core/base_view.dart';
 import 'package:skeleton/models/user.dart';
 import 'package:skeleton/view_models/user_view_model.dart';
 
+import 'list_screen.dart';
+
 class HomeScreen extends StatelessWidget {
 
   @override
@@ -17,9 +19,14 @@ class HomeScreen extends StatelessWidget {
         builder: (BuildContext context, UserViewModel userViewModel, _) {
           if(userViewModel.isLoading()) return Center(child: CircularProgressIndicator(),);
           User user = userViewModel.user;
-          return Center(
-            child: Text(
-              user.email,
+          return InkWell(
+            onTap: (){
+              Navigator.push(context, MaterialPageRoute(builder: (context) => ListScreen()));
+            },
+            child: Center(
+              child: Text(
+                user.email,
+              ),
             ),
           );
         }
